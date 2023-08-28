@@ -18,6 +18,10 @@ if randomize_wallets:
     random.seed(32)
     random.shuffle(private_keys)
 
+logger.error(f'Created by CryptoTransformator')
+logger.error(f'https://github.com/CryptoTransformator')
+logger.error(f'https://t.me/gori_levi')
+
 for private_key in private_keys:
     MakeVolumeEraLend(web3, abi, private_key, desired_volume_doll, gas_treshold, gas_adjust, sleep_time_from, sleep_time_to)
 

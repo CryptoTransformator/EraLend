@@ -1,3 +1,6 @@
+English video tutorial https://youtu.be/-yjMqXoIejY
+Русская видео-инструкция https://www.youtube.com/watch?v=Ezu4LFW_hO8
+
 EraLend Volume Maker
 
 Description

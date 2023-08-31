@@ -42,13 +42,13 @@ def MakeVolumeEraLend(web3, abi, private_key, desired_volume_doll, gas_treshold,
     logger.debug(f'Wallet {wallet_address} is in process...')
     
     while volume < desired_volume_doll:
+        sleep_time = random.randint(sleep_time_from, sleep_time_to)
         current_gas_price = get_gas_gwei()
         if current_gas_price > gas_treshold:
             logger.warning(f"Current gas price {current_gas_price} is above the threshold {gas_treshold}. Skipping transaction.")
             time.sleep(sleep_time)
             continue
         
-        sleep_time = random.randint(sleep_time_from, sleep_time_to)
         logger.info(f"Current volume: {volume}, Desired volume: {desired_volume_doll}")
         eth_balance = get_eth_balance(wallet_address)
         eth_price = get_eth_price()

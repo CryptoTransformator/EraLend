@@ -94,7 +94,7 @@ def MakeVolumeEraLend(web3, abi, private_key, desired_volume_doll, gas_treshold,
         
         time.sleep(sleep_time)
         
-        value = contract.functions.balanceOfUnderlying(wallet_address).call()
+        value = round(contract.functions.balanceOfUnderlying(wallet_address).call() * 0.9999)
         tx = contract.functions.redeemUnderlying(value).build_transaction({
             'from': wallet_address,
             'value': 0,
